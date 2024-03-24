@@ -29,6 +29,7 @@ jobs:
           node-version: 16
           cache: pnpm
       - run: pnpm install --no-frozen-lockfile
+      - run: mkdir docs/.vitepress/dist
       - name: Build
         run: pnpm run docs:build
       - uses: actions/configure-pages@v2
